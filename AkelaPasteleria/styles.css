@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box!important;
+}
+
+html {
+    font-family: GillSans, Calibri, Trebuchet, sans-serif;
+  }
+
+.navbar-nav>li>a{
+  text-align: right;
+}
+
+#secciones {
+    margin-top:80px;
+}
+
+footer{
+  overflow: hidden;
+  clear: both;
+  width: 100%;
+  background: rgb(209, 8, 27);
+  /*border-radius: 20px 20px 0 0;*/
+  /*border: 2px solid black;*/
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  
+
+}
+
+footer li{
+  /*margin-right: 10px;*/
+  display: inline-block;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize; /*convierte a mayuscula la primer letra*/
+}

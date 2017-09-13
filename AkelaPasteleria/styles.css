@@ -14,10 +14,12 @@ html {
 
 #secciones {
     margin-top:80px;
+    min-height: 100%;
 }
 
 footer{
   overflow: hidden;
+  /*position: absolute;*/
   clear: both;
   width: 100%;
   background: rgb(209, 8, 27);
@@ -29,10 +31,13 @@ footer{
   justify-content: center;
   align-items: center;
   padding-top: 20px;
-  
+
 
 }
 
+.footer.container{
+
+}
 footer li{
   /*margin-right: 10px;*/
   display: inline-block;

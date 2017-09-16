@@ -1,3 +1,4 @@
+<<<<<<< HEAD
     </div>
     <?php require('footer.php'); ?>
 
@@ -6,3 +7,11 @@
     <script src="assets/libs/bootstrap-3/js/bootstrap.min.js"></script>
 </body>
 </html>
+=======
+    </div>
+    <?php require('footer.php'); ?>
+
+
+</body>
+</html>
+>>>>>>> master

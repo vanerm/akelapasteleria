@@ -5,6 +5,7 @@ require('templates/open.php');
 <!DOCTYPE html>
 <html lang="en">
   <body class="bodydulces">
+    <h1>Cositas Dulces</h1>
     <p> hola aca van a ir varias imagenes de las cositas dulces>..</p>
 
 		<!-- productos -->

@@ -169,26 +169,28 @@
     </a> -->
 
     <!--Footer  -->
-    <footer class="footer">
+    <!-- <footer class="footer"> -->
       <!-- <nav class="navbar navbar-inverse navbar-fixed-bottom"> -->
-        <div class="container">
+        <!-- <div class="container"> -->
           <!-- <div class="jumbotron" style="width:100%"> -->
 
-          <ul class="nav navbar-nav">
+          <!-- <ul class="nav navbar-nav"> -->
             <!-- <li class="active"><a href="#">Home</a></li> -->
-            <li><a href="https://www.instagram.com/akelapasteleria/">Instagram</i></a></li>
-            <li><a href="https://www.facebook.com/akelapasteleria">Facebook</a></li>
-            <li><a class="page-scroll" href="preguntasfrecuentes.php">Preguntas Frecuentes</a></li>
+            <!-- <li><a href="https://www.instagram.com/akelapasteleria/">Instagram</i></a></li> -->
+            <!-- <li><a href="https://www.facebook.com/akelapasteleria">Facebook</a></li> -->
+            <!-- <li><a class="page-scroll" href="preguntasfrecuentes.php">Preguntas Frecuentes</a></li> -->
 
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Akela Pasteleria © All Rights Reserved</a></li>
+          <!-- </ul> -->
+          <!-- <ul class="nav navbar-nav navbar-right"> -->
+            <!-- <li><a href="#">Akela Pasteleria © All Rights Reserved</a></li> -->
 
-          </ul>
+          <!-- </ul> -->
         <!-- </div> -->
-        </div>
+        <!-- </div> -->
       <!-- </nav> -->
-    </footer>
+    <!-- </footer> -->
+
+    <?php require('templates/close.php'); ?>
 
     </body>
 

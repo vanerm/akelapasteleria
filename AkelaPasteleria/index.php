@@ -60,8 +60,8 @@
             <li><a class="page-scroll" href="#">Tartas</a></li>
             <li><a class="page-scroll" href="#">Cositas Dulces</a></li> -->
             <li><a href="registracion.php"><span class="glyphicon glyphicon-user"></span> Registración</a></li>
-            <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-            <li><a href="micarrito.php"><span class="glyphicon glyphicon-shopping-cart"></span>Mi Carrito</a></li>
+            <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span>  Login</a></li>
+            <li><a href="micarrito.php"><span class="glyphicon glyphicon-shopping-cart"></span>  Mi Carrito</a></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

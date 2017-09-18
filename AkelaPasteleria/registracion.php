@@ -15,7 +15,6 @@ $genero = $_POST['genero'] ?? null;
 $dia = $_POST['fnac_dia'] ?? null;
 $mes = $_POST['fnac_mes'] ?? null;
 $anio = $_POST['fnac_anio'] ?? null;
-$cats = $_POST['categorias'] ?? [];
 $descripcion = $_POST['descripcion'] ?? null;
 
 // Validar -errores
@@ -32,16 +31,8 @@ if($_POST)
 
     $usuario = armarUsuario($_POST);
     guardarUsuario($usuario);
-    // $archivo = $_FILES["avatar"]["tmp_name"];
-    // $nombreDelArchivo =$_FILES["avatar"]["name"];
-    // $extension = pathinfo($nombreDelArchivo, PATHINFO_EXTENSION);
 
-    // $nombre = dirname(__FILE__) . "/img/" . $_POST["username"] . ".$extension";
-    // var_dump($nombre);exit;
-
-    // move_uploaded_file($archivo, $nombre);
-
-    header("Location:felicidad.php");exit;
+    header("Location:confirmacionDeRegistracion.php");exit;
   }
 }
 
@@ -51,7 +42,7 @@ if($_POST)
     $title = 'REGISTRACIÓN';
     require('templates/open.php');
     ?>
-
+  <div class="container">
   <div id="secciones" class="interna">
     <section id="registracion">
 
@@ -188,6 +179,7 @@ if($_POST)
           </div>
       </div>
     </section>
+  </div>
   </div>
 
   <!--Footer  -->

@@ -3,7 +3,7 @@
 
       <ul class="nav navbar-nav">
 
-        <li><a href="https://www.instagram.com/akelapasteleria/">Instagram</i></a></li>
+          <li><a href="https://www.instagram.com/akelapasteleria/">Instagram</a></li>
         <li><a href="https://www.facebook.com/akelapasteleria">Facebook</a></li>
         <li><a class="page-scroll" href="preguntasfrecuentes.php">Preguntas Frecuentes</a></li>
 

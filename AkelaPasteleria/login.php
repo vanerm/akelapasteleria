@@ -1,29 +1,31 @@
 <?php
-
 require_once("funciones.php");
 
-$email = $_POST['email'] ?? null;
+if(estaLogueado()){
+  header("Location:miPerfil.php");exit;
+}
+
 
 $arrayDeErrores=[];
-if($_POST)
-{
-  $arrayDeErrores = validarInformacion();
+if($_POST){
+  $arrayDeErrores= validarLogin();
 
-  if(count($arrayDeErrores)==0){
+  if (count($arrayDeErrores) == 0){
+    loguear($_POST["email"]);
+    if (isset($_POST["recordame"])){
+      recordar($_POST["email"]);
+    }
 
-    header("Location:felicidad.php");exit;
+    header("Location:miPerfil.php");exit;
   }
 }
 
 ?>
-
 <?php
 $title = 'LOGIN';
 require('templates/open.php');
 ?>
-
-
-
+<div class="container">
 <div id="secciones" class="interna">
   <section id="login">
 
@@ -44,19 +46,25 @@ require('templates/open.php');
             <div class="form-group">
               <label class="control-label col-sm-2" for="email">Email: </label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="email" name="email" value="<?php echo $email; ?>" placeholder="Ingrese Email">
+                  <div class="input-group">
+                    <input id="email" type="text" class="form-control" name="email" placeholder="Email">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                  </div>
                 </div>
             </div>
             <div class="form-group">
               <label class="control-label col-sm-2" for="contrasena">Contraseña: </label>
                 <div class="col-sm-10">
-                  <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Ingrese Contraseña">
+                  <div class="input-group">
+                    <input id="password" type="password" class="form-control" name="contrasena" placeholder="Contraseña">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                  </div>
                 </div>
             </div>
             <div class="form-group">
               <div class="col-sm-offset-2 col-sm-10">
                 <div class="checkbox">
-                  <label><input type="checkbox" name="remember"> Remember me</label>
+                  <label><input type="checkbox" name="remember"> Recordarme </label>
                 </div>
               </div>
             </div>
@@ -65,13 +73,16 @@ require('templates/open.php');
                 <button type="submit" class="btn btn-info">Enviar</button>
               </div>
             </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <h5>Olvido su contraseña? <a href="#">click aqui</a></h5>
+      				  <h5>Usuario nuevo? <a href="registracion.php">Crear una nueva cuenta</a></h5>
+      			  </div>
+            </div>
           </form>
         </div>
       </div>
     </section>
   </div>
-
+</div>
 <?php require('templates/close.php'); ?>
-</body>
-
-</html>

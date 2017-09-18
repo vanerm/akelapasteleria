@@ -25,24 +25,21 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
-    <!-- <script type="text/javascript">
-    $( document ).ready(function){
-      $(".button-collapse").sideNav();
-    }
-    </script> -->
+
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" cz-shortcut-listen="true">
 
     <!-- </header> -->
+  <header class="header">
     <nav class="navbar navbar-default navbar-fixed-top top-nav-collapse" role="navigation">
       <div class="container">
       <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header page-scroll">
-        <button type="button" class="navbar-toggle collapsed" data-toggle ="collapse" data-target=".navbar-ex1-collapse">
-          <span class="sr-only"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-links">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
         </button>
 
         <!-- logo -->
@@ -52,7 +49,7 @@
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
-        <div id="navbar" class="navbar-collpase navbar-ex1-collapse collapse in" aria-expanded="true" style>
+        <div class="collapse navbar-collapse" id="navbar-links">
           <ul id= "navbarItems" class="nav navbar-nav navbar-right">
             <li><a class="page-scroll" href="#">AKELA</a></li>
             <li><a class="page-scroll" href="#Productos">Nuestros Productos</a></li>
@@ -66,6 +63,7 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
+  </header>
 
 
 <div id="secciones" class="interna">
@@ -85,21 +83,21 @@
         <div class="carousel-inner">
 
           <div class="item active">
-            <img class="responsive" src="./images/tartafrutilla2.jpg" alt="Tartas" style="width:100%;">
+            <img class="responsive" src="./images2/carrousel/tartafrutillas2.png" alt="Tartas" style="width:100%;">
             <div class="carousel-caption">
               <h3>Tartas</h3>
               <!-- <p>Las tartas mas ricas!</p> -->
             </div>
           </div>
           <div class="item">
-            <img class="responsive" src="./images/browny2.jpg" alt="Tortas" style="width:100%;">
+            <img class="responsive" src="./images2/carrousel/browniemerengue2.png" alt="Tortas" style="width:100%;">
             <div class="carousel-caption">
               <h3>Tortas</h3>
               <!-- <p>Deliciosas!</p> -->
             </div>
           </div>
           <div class="item">
-            <img class="responsive" src="./images/macarons2.jpg" alt="Cositas Dulces" style="width:100%;">
+            <img class="responsive" src="./images2/carrousel/macarrons2.png" alt="Cositas Dulces" style="width:100%;">
             <div class="carousel-caption">
               <h3>Cositas Dulces</h3>
               <!-- <p>Las vas a amar!</p> -->
@@ -162,11 +160,6 @@
     </div>
   </section>
   </div>
-
-    <!-- Return to top -->
-    <!-- <a href="#page-top" class="page-scroll" id="return-to-top" style="display:none;">
-      <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
-    </a> -->
 
     <!--Footer  -->
     <footer class="footer">

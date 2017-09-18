@@ -33,5 +33,5 @@
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" cz-shortcut-listen="true">
 
-        <?php require('header.php'); ?>
-        <div class="container">
+    <?php require('header.php'); ?>
+        <!-- <div class="container"> -->

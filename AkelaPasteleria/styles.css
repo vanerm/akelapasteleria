@@ -12,10 +12,15 @@ html {
   text-align: right;
 }
 
+
 #secciones {
     margin-top:80px;
     min-height: 100%;
 }
+
+/*header .navbar{
+  background: rgb(223, 205, 193);
+}*/
 
 footer{
   overflow: hidden;
@@ -25,13 +30,13 @@ footer{
   background: rgb(209, 8, 27);
   /*border-radius: 20px 20px 0 0;*/
   /*border: 2px solid black;*/
-  height: 100px;
-  display: flex;
+  /*height: 100px;*/
+  display: block;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
-
 
 }
 

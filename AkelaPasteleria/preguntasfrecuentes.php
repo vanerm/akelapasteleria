@@ -2,17 +2,6 @@
 $title = 'PREGUNTAS FRECUENTES';
 require('templates/open.php');
 ?>
-<html>
-  <body style="padding-top:80px">
-    <h3>Como puedo comprar?</h3>
-    <p></p>
-
-<<<<<<< HEAD
-
-
-  </body>
-</html>
-=======
 <!-- Encabezado -->
 <div class="container">
   <div id="secciones" class="interna">
@@ -159,5 +148,4 @@ require('templates/open.php');
   </div>
 </div>
 
->>>>>>> master
 <?php require('templates/close.php'); ?>

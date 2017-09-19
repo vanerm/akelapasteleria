@@ -1,16 +1,6 @@
 <?php
 require_once("funciones.php");
 $title = 'MI CARRITO';
-<<<<<<< HEAD
-require('templates/open.php');?>
-<!DOCTYPE html>
-<html>
-
-  <body style="padding-top:145px">
-
-  </body>
-</html>
-=======
 require('templates/open.php');
 
 ?>
@@ -25,6 +15,6 @@ require('templates/open.php');
     </section>
   </div>
 </div>
->>>>>>> master
+
 
 <?php require('templates/close.php'); ?>

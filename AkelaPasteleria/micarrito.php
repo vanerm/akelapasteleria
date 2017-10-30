@@ -1,5 +1,5 @@
 <?php
-require_once("funciones.php");
+require_once("soporte.php");
 $title = 'MI CARRITO';
 require('templates/open.php');
 

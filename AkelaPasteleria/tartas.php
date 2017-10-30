@@ -1,4 +1,5 @@
 <?php
+require_once("soporte.php");
 $title = 'TARTAS';
 require('templates/open.php');
 ?>

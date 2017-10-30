@@ -1,23 +1,26 @@
 <?php
-require_once("funciones.php");
+    require_once("soporte.php");
 
-if(estaLogueado()){
-  header("Location:miPerfil.php");exit;
-}
+    if($auth->estaLogueado()){
+      header("Location:index.php");exit;
+    }
 
 
 $arrayDeErrores=[];
-if($_POST){
-  $arrayDeErrores= validarLogin();
+    if($_POST){
+      $arrayDeErrores= $validator->validarLogin($db);
 
-  if (count($arrayDeErrores) == 0){
-    loguear($_POST["email"]);
-    if (isset($_POST["recordame"])){
-      recordar($_POST["email"]);
-    }
+      if (count($arrayDeErrores) == 0){
+        $auth->loguear($_POST["email"]);
 
-    header("Location:miPerfil.php");exit;
-  }
+        if (isset($_POST["recordame"])){
+            setcookie("usuarioLogueado", $_POST["email"], time()+60*60*24*30);
+            //$auth->recordar($_POST["email"]);
+        }
+
+          header("Location:miPerfil.php?email=" . $_POST["email"]);
+          //header("Location:miPerfil.php");exit;
+      }
 }
 
 ?>
@@ -53,10 +56,10 @@ require('templates/open.php');
                 </div>
             </div>
             <div class="form-group">
-              <label class="control-label col-sm-2" for="contrasena">Contraseña: </label>
+              <label class="control-label col-sm-2" for="password">Contraseña: </label>
                 <div class="col-sm-10">
                   <div class="input-group">
-                    <input id="password" type="password" class="form-control" name="contrasena" placeholder="Contraseña">
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Contraseña">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
                   </div>
                 </div>

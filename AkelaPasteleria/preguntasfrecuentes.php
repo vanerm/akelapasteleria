@@ -1,4 +1,6 @@
 <?php
+require_once("soporte.php");
+
 $title = 'PREGUNTAS FRECUENTES';
 require('templates/open.php');
 ?>

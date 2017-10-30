@@ -25,8 +25,25 @@
           <li><a class="page-scroll" href="tartas.php">Tartas</a></li>
           <li><a class="page-scroll" href="cositasdulces.php">Cositas Dulces</a></li>
           <li><a href="registracion.php"><span class="glyphicon glyphicon-user"></span> Registración</a></li>
-          <li><a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-          <li><a href="micarrito.php"><span class="glyphicon glyphicon-shopping-cart"></span>Mi Carrito</a></li>
+
+            <?php if(!$auth->estaLogueado()) : ?>
+            <li>
+                <a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+            </li>
+            <?php endif; ?>
+
+            <?php if ($auth->estaLogueado()) : ?>
+                <li>
+                    <a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+                </li>
+                <li>
+                    <a href="miPerfil.php"><span class="glyphicon glyphicon-log-in"></span> Mi Perfil</a>
+                </li>
+                <li>
+                    <a href="micarrito.php"><span class="glyphicon glyphicon-shopping-cart"></span>Mi Carrito</a>
+                </li>
+            <?php endif; ?>
+
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

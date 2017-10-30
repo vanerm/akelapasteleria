@@ -1,6 +1,10 @@
 <?php
 
-require_once("funciones.php");
+require_once("soporte.php");
+
+if ($auth->estaLogueado()) {
+    header("Location:index.php");exit;
+}
 $meses = [
     1 => "Enero", 2 => "Febrero", 3 => "Marzo", 4 => "Abril", 5 => "Mayo", 6 => "Junio",
     7 => "Julio", 8 => "Agosto", 9 => "Septiembre", 10 => "Octubre", 11 => "Noviembre", 12 => "Diciembre"
@@ -8,7 +12,8 @@ $meses = [
 
 $nombre = $_POST['nombre'] ?? null;
 $apellido = $_POST['apellido'] ?? null;
-$username = $_POST['username'] ?? null;
+$direccion = $_POST['direcion'] ?? null;
+$telefono = $_POST['telefono'] ?? null;
 $email = $_POST['email'] ?? null;
 $emailConfirm = $_POST['email_confirm'] ?? null;
 $genero = $_POST['genero'] ?? null;
@@ -25,14 +30,17 @@ $descripcion = $_POST['descripcion'] ?? null;
 $arrayDeErrores=[];
 if($_POST)
 {
-  $arrayDeErrores = validarInformacion();
+  $arrayDeErrores = $validator->validarInformacion($db);
 
   if(count($arrayDeErrores)==0){
+    $fecha = $dia .'/'. $mes . '/' . $anio;
 
-    $usuario = armarUsuario($_POST);
-    guardarUsuario($usuario);
+    $usuario = new Usuario($_POST["nombre"], $_POST["apellido"],$_POST["direccion"],$_POST["telefono"],
+        $_POST["email"],$_POST["password"],$_POST["genero"] ,$fecha);
 
-    header("Location:confirmacionDeRegistracion.php");exit;
+    $db->guardarUsuario($usuario);
+
+    header("Location:login.php");exit;
   }
 }
 
@@ -60,7 +68,7 @@ if($_POST)
           </ul>
           <?php endif;?>
 
-            <form role="form" action="" method="post" enctype="multipart/form-data">
+            <form role="form" action="registracion.php" method="POST" enctype="multipart/form-data">
                 <div class="row">
                     <div class="form-group col-sm-6">
                         <label for="nombre">Nombre</label>
@@ -74,13 +82,13 @@ if($_POST)
                 <div class="row">
                     <div class="form-group col-sm-6">
                         <label for="direccion">Direccion</label>
-                        <input type="text" class="form-control" id="username" name="direccion" value="<?php echo $username; ?>" placeholder="Ingrese Nombre de Usuario">
+                        <input type="text" class="form-control" id="username" name="direccion" value="<?php echo $direccion; ?>" placeholder="Ingrese Nombre de Usuario">
                     </div>
                 <!-- </div>
                 <div class="row"> -->
                     <div class="form-group col-sm-6">
                         <label for="telefono">Telefono</label>
-                        <input type="text" class="form-control" id="username" name="telefono" value="<?php echo $username; ?>" placeholder="Ingrese Nombre de Usuario">
+                        <input type="text" class="form-control" id="username" name="telefono" value="<?php echo $telefono; ?>" placeholder="Ingrese Nombre de Usuario">
                     </div>
                 </div>
 
@@ -96,12 +104,12 @@ if($_POST)
                 </div>
                 <div class="row">
                     <div class="form-group col-sm-6">
-                        <label for="contrasena">Contraseña</label>
-                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Ingrese Contraseña">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Ingrese Contraseña">
                     </div>
                     <div class="form-group col-sm-6">
-                        <label for="contrasena-confirm">Confirmar Contraseña</label>
-                        <input type="password" class="form-control" id="contrasena-confirm" name="contrasena_confirm" placeholder="Ingrese Confirmación Contraseña">
+                        <label for="password-confirm">Confirmar Contraseña</label>
+                        <input type="password" class="form-control" id="password-confirm" name="password_confirm" placeholder="Ingrese Confirmación Contraseña">
                     </div>
                 </div>
 

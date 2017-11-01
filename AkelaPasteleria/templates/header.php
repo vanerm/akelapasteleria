@@ -24,12 +24,15 @@
           <li><a class="page-scroll" href="tortas.php">Tortas</a></li>
           <li><a class="page-scroll" href="tartas.php">Tartas</a></li>
           <li><a class="page-scroll" href="cositasdulces.php">Cositas Dulces</a></li>
-          <li><a href="registracion.php"><span class="glyphicon glyphicon-user"></span> Registración</a></li>
+          
 
             <?php if(!$auth->estaLogueado()) : ?>
-            <li>
-                <a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
-            </li>
+                <li>
+                    <a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </li>
+                <li>
+                    <a href="registracion.php"><span class="glyphicon glyphicon-user"></span> Registración</a>
+                </li>
             <?php endif; ?>
 
             <?php if ($auth->estaLogueado()) : ?>

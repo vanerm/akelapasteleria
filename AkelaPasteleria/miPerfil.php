@@ -22,13 +22,13 @@ require('templates/open.php');
     <section id="login">
       <div class="jumbotron" >
         <div class="container">
-          <h2>Perfil de: <?=$usuario->getNombre()?> </h2>
+          <h2>Perfil de: <?=$usuario->getNombre() . ' ' . $usuario->getApellido()?> </h2>
 
             <ul>
                 <li>Nombre: <?=$usuario->getNombre()?> </li>
-                <li>Nombre: <?=$usuario->getApellido()?> </li>
+                <li>Apellido: <?=$usuario->getApellido()?> </li>
                 <li>Email: <?=$usuario->getEmail()?> </li>
-                <li>Edad: <?=$usuario->getFNac()?> </li>
+                <li>Fecha Nacimiento: <?=$usuario->getFNac()?> </li>
             </ul>
 
 

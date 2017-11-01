@@ -57,16 +57,19 @@
             <!-- <li><a class="page-scroll" href="#">Tortas</a></li>
             <li><a class="page-scroll" href="#">Tartas</a></li>
             <li><a class="page-scroll" href="#">Cositas Dulces</a></li> -->
-              <li><a href="registracion.php"><span class="glyphicon glyphicon-user"></span> Registración</a></li>
+
               <?php if(!$auth->estaLogueado()) : ?>
                   <li>
                       <a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                  </li>
+                  <li>
+                      <a href="registracion.php"><span class="glyphicon glyphicon-user"></span> Registración</a>
                   </li>
               <?php endif; ?>
 
               <?php if ($auth->estaLogueado()) : ?>
                   <li>
-                      <a href="login.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
+                      <a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> Logout</a>
                   </li>
                   <li>
                       <a href="miPerfil.php"><span class="glyphicon glyphicon-log-in"></span> Mi Perfil</a>
